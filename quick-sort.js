@@ -7,10 +7,16 @@ let swap = require('./swap')
 
 // More commonly used than merge sort (more cache-efficient and can easily be performed in-place (i.e. without additional memory allocations)).
 
+/*
+  if start index and end index have reacted the middle, then return the sorted array.
+
+*/
+
 let quickSort = (array, start, end) => {
+  console.log(`start: ${start} end: ${end}`)
 	start = start === undefined ? 0 : start
 	end = end === undefined ? array.length : end
-	if (start >= end) {
+	if (start >= end) { // base case
 		return array
 	}
 
@@ -35,5 +41,7 @@ let partition = (array, start, end) => {
 	swap(array, end-1, j)
 	return j
 }
+
+console.log(quickSort([4,3,8,23,49,12]))
 
 module.exports = quickSort;
