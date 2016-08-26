@@ -20,6 +20,7 @@ let sortInt = (array, low, high) => {
 	}
 	return output
 }
+// account for duplicates e.g., sortInt([1,1,1,2,1,3,2,1,4,1,5,1,2,1,4,1,2,1,3], 1, 4);
 console.log(sortInt(test, 1, 10), '<-- sortInt')
 
 /* Write an algorithm to shuffle an array into a random order in-place (i.e. without creating a new array). */
@@ -56,4 +57,5 @@ let sortBooks = (array) => {
 	}
 	return output
 }
+
 console.log(sortBooks(books), '<-- sortBooks')
